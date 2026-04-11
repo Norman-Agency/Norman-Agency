@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+    <defs>
+          <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" style="stop-color:#1a1a2e"/>
+                  <stop offset="100%" style="stop-color:#0a0a15"/>
+          </radialGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" style="stop-color:#e94560;stop-opacity:0.3"/>
+                  <stop offset="100%" style="stop-color:#e94560;stop-opacity:0"/>
+          </radialGradient>
+          <filter id="blur">
+                  <feGaussianBlur stdDeviation="2"/>
+          </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="900" height="500" fill="url(#bg)"/>
+
+    <!-- Stars -->
+    <circle cx="50" cy="30" r="1" fill="#fff" opacity="0.6"/>
+    <circle cx="150" cy="80" r="1.5" fill="#fff" opacity="0.4"/>
+    <circle cx="250" cy="20" r="1" fill="#fff" opacity="0.8"/>
+    <circle cx="350" cy="60" r="1.2" fill="#fff" opacity="0.5"/>
+    <circle cx="500" cy="40" r="1" fill="#fff" opacity="0.7"/>
+    <circle cx="600" cy="90" r="1.5" fill="#fff" opacity="0.3"/>
+    <circle cx="700" cy="25" r="1" fill="#fff" opacity="0.6"/>
+    <circle cx="800" cy="70" r="1.2" fill="#fff" opacity="0.5"/>
+    <circle cx="100" cy="450" r="1" fill="#fff" opacity="0.4"/>
+    <circle cx="200" cy="480" r="1.5" fill="#fff" opacity="0.6"/>
+    <circle cx="400" cy="460" r="1" fill="#fff" opacity="0.5"/>
+    <circle cx="650" cy="440" r="1.2" fill="#fff" opacity="0.7"/>
+    <circle cx="750" cy="470" r="1" fill="#fff" opacity="0.4"/>
+    <circle cx="850" cy="430" r="1.5" fill="#fff" opacity="0.3"/>
+    <circle cx="80" cy="200" r="1" fill="#fff" opacity="0.5"/>
+    <circle cx="820" cy="300" r="1" fill="#fff" opacity="0.6"/>
+    <circle cx="30" cy="350" r="1.2" fill="#fff" opacity="0.4"/>
+    <circle cx="870" cy="150" r="1" fill="#fff" opacity="0.7"/>
+
+    <!-- Center glow -->
+    <circle cx="450" cy="250" r="120" fill="url(#glow)"/>
+
+    <!-- Orbital rings -->
+    <ellipse cx="450" cy="250" rx="100" ry="100" fill="none" stroke="#e94560" stroke-width="0.5" opacity="0.3" stroke-dasharray="4,4"/>
+    <ellipse cx="450" cy="250" rx="160" ry="80" fill="none" stroke="#0f3460" stroke-width="0.5" opacity="0.4" stroke-dasharray="4,4" transform="rotate(-20,450,250)"/>
+    <ellipse cx="450" cy="250" rx="220" ry="90" fill="none" stroke="#16213e" stroke-width="0.5" opacity="0.3" stroke-dasharray="4,4" transform="rotate(15,450,250)"/>
+    <ellipse cx="450" cy="250" rx="300" ry="120" fill="none" stroke="#533483" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,4" transform="rotate(-10,450,250)"/>
+    <ellipse cx="450" cy="250" rx="380" ry="150" fill="none" stroke="#e94560" stroke-width="0.3" opacity="0.15" stroke-dasharray="4,4" transform="rotate(5,450,250)"/>
+
+    <!-- Center logo area -->
+    <circle cx="450" cy="250" r="50" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+    <text x="450" y="240" text-anchor="middle" font-family="monospace" font-size="11" fill="#e94560" font-weight="bold">NORMAN</text>
+    <text x="450" y="258" text-anchor="middle" font-family="monospace" font-size="11" fill="#fff" font-weight="bold">AGENCY</text>
+    <text x="450" y="275" text-anchor="middle" font-family="monospace" font-size="6" fill="#888">creative digital</text>
+
+    <!-- Orbiting elements - HTML -->
+    <circle cx="550" cy="250" r="18" fill="#E34F26" opacity="0.9"/>
+    <text x="550" y="254" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" font-weight="bold">HTML5</text>
+
+    <!-- CSS -->
+    <circle cx="390" cy="170" r="16" fill="#1572B6" opacity="0.9"/>
+    <text x="390" y="174" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" font-weight="bold">CSS3</text>
+
+    <!-- JavaScript -->
+    <circle cx="350" cy="290" r="17" fill="#F7DF1E" opacity="0.9"/>
+    <text x="350" y="294" text-anchor="middle" font-family="monospace" font-size="7" fill="#000" font-weight="bold">JS</text>
+
+    <!-- AI -->
+    <circle cx="580" cy="170" r="22" fill="#412991" opacity="0.9"/>
+    <text x="580" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#fff" font-weight="bold">AI</text>
+    <text x="580" y="179" text-anchor="middle" font-family="monospace" font-size="6" fill="#ccc">&amp; LLM</text>
+
+    <!-- Claude -->
+    <circle cx="620" cy="320" r="20" fill="#D97757" opacity="0.9"/>
+    <text x="620" y="317" text-anchor="middle" font-family="monospace" font-size="7" fill="#fff" font-weight="bold">Claude</text>
+    <text x="620" y="329" text-anchor="middle" font-family="monospace" font-size="6" fill="#fff">AI</text>
+
+    <!-- UX Design -->
+    <circle cx="300" cy="200" r="15" fill="#FF61F6" opacity="0.9"/>
+    <text x="300" y="197" text-anchor="middle" font-family="monospace" font-size="6" fill="#fff" font-weight="bold">UX</text>
+    <text x="300" y="207" text-anchor="middle" font-family="monospace" font-size="5" fill="#fff">Design</text>
+
+    <!-- SubventionAI project -->
+    <circle cx="200" cy="300" r="24" fill="none" stroke="#00d2ff" stroke-width="1.5" opacity="0.8"/>
+    <text x="200" y="296" text-anchor="middle" font-family="monospace" font-size="6" fill="#00d2ff" font-weight="bold">Subvention</text>
+    <text x="200" y="308" text-anchor="middle" font-family="monospace" font-size="7" fill="#00d2ff" font-weight="bold">AI</text>
+
+    <!-- Agent IA Samsung project -->
+    <circle cx="700" cy="220" r="22" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
+    <text x="700" y="216" text-anchor="middle" font-family="monospace" font-size="5" fill="#00ff88" font-weight="bold">Agent IA</text>
+    <text x="700" y="228" text-anchor="middle" font-family="monospace" font-size="5" fill="#00ff88">Samsung</text>
+
+    <!-- Journal de taches project -->
+    <circle cx="180" cy="180" r="20" fill="none" stroke="#ffaa00" stroke-width="1.5" opacity="0.8"/>
+    <text x="180" y="176" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00" font-weight="bold">Journal</text>
+    <text x="180" y="188" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00">TDAH/TSA</text>
+
+    <!-- Connecting lines from center to satellites -->
+    <line x1="500" y1="250" x2="532" y2="250" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <line x1="420" y1="210" x2="400" y2="180" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <line x1="410" y1="270" x2="367" y2="285" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <line x1="490" y1="220" x2="565" y2="175" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <line x1="490" y1="280" x2="605" y2="310" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+    <line x1="420" y1="220" x2="310" y2="200" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
+
+    <!-- Top text -->
+    <text x="450" y="40" text-anchor="middle" font-family="monospace" font-size="14" fill="#e94560" opacity="0.6">explo(r|it)ing digital boundaries</text>
+
+    <!-- Bottom text -->
+    <text x="450" y="480" text-anchor="middle" font-family="monospace" font-size="10" fill="#555">norman-agency.com  ·  subventionai.fr  ·  Clean code, beautiful UI</text>
+
+    <!-- Small decorative dots on orbits -->
+    <circle cx="350" cy="250" r="2" fill="#e94560" opacity="0.6"/>
+    <circle cx="450" cy="150" r="2" fill="#0f3460" opacity="0.6"/>
+    <circle cx="550" cy="340" r="2" fill="#533483" opacity="0.5"/>
+    <circle cx="250" cy="250" r="2" fill="#e94560" opacity="0.4"/>
+    <circle cx="650" cy="250" r="2" fill="#533483" opacity="0.4"/>
+    <circle cx="450" cy="370" r="2" fill="#16213e" opacity="0.5"/>
+
+</svg>
