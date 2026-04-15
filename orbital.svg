@@ -94,6 +94,11 @@
     <text x="180" y="176" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00" font-weight="bold">Journal</text>
     <text x="180" y="188" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00">TDAH/TSA</text>
 
+    <!-- VANGUARD project -->-->
+    <circle cx="750" cy="380" r="24" fill="none" stroke="#ff3366" stroke-width="1.5" opacity="0.8"/>
+    <text x="750" y="376" text-anchor="middle" font-family="monospace" font-size="5" fill="#ff3366" font-weight="bold">VANGUARD</text>
+    <text x="750" y="388" text-anchor="middle" font-family="monospace" font-size="5" fill="#ff3366">Pentester</text>
+
     <!-- Connecting lines from center to satellites -->
     <line x1="500" y1="250" x2="532" y2="250" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
     <line x1="420" y1="210" x2="400" y2="180" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
