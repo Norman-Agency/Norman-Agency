@@ -1,124 +1,182 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="100%" height="100%" viewBox="-450 -250 900 500" translate="no">
+    <style type="text/css">
+        .main { font-family:'Courier New', monospace; cursor:default; }
+        .main:hover   { opacity:0.4; }
+        .active:hover { opacity:1; }
+        .nofade       { pointer-events:none; }
+        @keyframes rot { from { transform:rotate(360deg); } to { transform:rotate(0deg); } }
+        @keyframes pulse { 0%{opacity:0.5} 50%{opacity:1} 100%{opacity:0.5} }
+        @keyframes blink { 0%{opacity:1} 49%{opacity:1} 50%{opacity:0} 100%{opacity:0} }
+        .rot_vanguard   { animation: rot 6s   linear infinite; }
+        .rot_samsung    { animation: rot 9s   linear infinite; }
+        .rot_subvention { animation: rot 13s  linear infinite; }
+        .rot_journal    { animation: rot 18s  linear infinite; }
+        .rot_agency     { animation: rot 24s  linear infinite; }
+        .rot_min        { animation: rot 1s   linear infinite; }
+        .rot_hr         { animation: rot 12s  linear infinite; }
+        .pulse          { animation: pulse 2.5s ease-in-out infinite; }
+        .blink          { animation: blink 1s step-end infinite; }
+    </style>
     <defs>
-          <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style="stop-color:#1a1a2e"/>
-                  <stop offset="100%" style="stop-color:#0a0a15"/>
+          <radialGradient id="bg" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%"   stop-color="#1a1a2e"/>
+                  <stop offset="100%" stop-color="#0a0a15"/>
           </radialGradient>
-          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style="stop-color:#e94560;stop-opacity:0.3"/>
-                  <stop offset="100%" style="stop-color:#e94560;stop-opacity:0"/>
+          <radialGradient id="core_grad" cx="35%" cy="30%" r="80%">
+                  <stop offset="0%"   stop-color="#e94560"/>
+                  <stop offset="50%"  stop-color="#16213e"/>
+                  <stop offset="100%" stop-color="#0a0a15"/>
           </radialGradient>
-          <filter id="blur">
-                  <feGaussianBlur stdDeviation="2"/>
+          <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="#e94560" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#e94560" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="glow">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
+          <filter id="glow2">
+                  <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <g id="sat">
+                  <circle cx="0" cy="0" r="5" fill="white" filter="url(#glow)"/>
+                  <circle cx="0" cy="0" r="3" fill="currentColor"/>
+          </g>
     </defs>
 
     <!-- Background -->
-    <rect width="900" height="500" fill="url(#bg)"/>
+    <rect x="-450" y="-250" width="900" height="500" fill="url(#bg)"/>
 
     <!-- Stars -->
-    <circle cx="50" cy="30" r="1" fill="#fff" opacity="0.6"/>
-    <circle cx="150" cy="80" r="1.5" fill="#fff" opacity="0.4"/>
-    <circle cx="250" cy="20" r="1" fill="#fff" opacity="0.8"/>
-    <circle cx="350" cy="60" r="1.2" fill="#fff" opacity="0.5"/>
-    <circle cx="500" cy="40" r="1" fill="#fff" opacity="0.7"/>
-    <circle cx="600" cy="90" r="1.5" fill="#fff" opacity="0.3"/>
-    <circle cx="700" cy="25" r="1" fill="#fff" opacity="0.6"/>
-    <circle cx="800" cy="70" r="1.2" fill="#fff" opacity="0.5"/>
-    <circle cx="100" cy="450" r="1" fill="#fff" opacity="0.4"/>
-    <circle cx="200" cy="480" r="1.5" fill="#fff" opacity="0.6"/>
-    <circle cx="400" cy="460" r="1" fill="#fff" opacity="0.5"/>
-    <circle cx="650" cy="440" r="1.2" fill="#fff" opacity="0.7"/>
-    <circle cx="750" cy="470" r="1" fill="#fff" opacity="0.4"/>
-    <circle cx="850" cy="430" r="1.5" fill="#fff" opacity="0.3"/>
-    <circle cx="80" cy="200" r="1" fill="#fff" opacity="0.5"/>
-    <circle cx="820" cy="300" r="1" fill="#fff" opacity="0.6"/>
-    <circle cx="30" cy="350" r="1.2" fill="#fff" opacity="0.4"/>
-    <circle cx="870" cy="150" r="1" fill="#fff" opacity="0.7"/>
+    <g fill="white" class="nofade">
+          <circle cx="-400" cy="-200" r="1.2" opacity="0.6"/>
+          <circle cx="350"  cy="-220" r="1"   opacity="0.5"/>
+          <circle cx="-300" cy="190"  r="1.4" opacity="0.7"/>
+          <circle cx="390"  cy="170"  r="1"   opacity="0.4"/>
+          <circle cx="-180" cy="-230" r="1"   opacity="0.8"/>
+          <circle cx="200"  cy="230"  r="1.2" opacity="0.5"/>
+          <circle cx="-420" cy="80"   r="0.8" opacity="0.6"/>
+          <circle cx="430"  cy="-100" r="1"   opacity="0.7"/>
+          <circle cx="100"  cy="-240" r="1.2" opacity="0.5"/>
+          <circle cx="-60"  cy="240"  r="1"   opacity="0.4"/>
+          <circle cx="280"  cy="-180" r="0.8" opacity="0.6"/>
+          <circle cx="-230" cy="150"  r="1"   opacity="0.5"/>
+          <circle cx="420"  cy="50"   r="1.2" opacity="0.3"/>
+          <circle cx="-440" cy="-50"  r="1"   opacity="0.5"/>
+          <circle cx="140"  cy="210"  r="0.8" opacity="0.7"/>
+          <circle cx="-340" cy="-130" r="1"   opacity="0.4"/>
+          <circle cx="310"  cy="120"  r="1.2" opacity="0.3"/>
+          <circle cx="-120" cy="-210" r="0.8" opacity="0.6"/>
+    </g>
 
-    <!-- Center glow -->
-    <circle cx="450" cy="250" r="120" fill="url(#glow)"/>
+    <g class="main">
+          <circle cx="0" cy="0" r="99999" fill-opacity="0"/>
 
-    <!-- Orbital rings -->
-    <ellipse cx="450" cy="250" rx="100" ry="100" fill="none" stroke="#e94560" stroke-width="0.5" opacity="0.3" stroke-dasharray="4,4"/>
-    <ellipse cx="450" cy="250" rx="160" ry="80" fill="none" stroke="#0f3460" stroke-width="0.5" opacity="0.4" stroke-dasharray="4,4" transform="rotate(-20,450,250)"/>
-    <ellipse cx="450" cy="250" rx="220" ry="90" fill="none" stroke="#16213e" stroke-width="0.5" opacity="0.3" stroke-dasharray="4,4" transform="rotate(15,450,250)"/>
-    <ellipse cx="450" cy="250" rx="300" ry="120" fill="none" stroke="#533483" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,4" transform="rotate(-10,450,250)"/>
-    <ellipse cx="450" cy="250" rx="380" ry="150" fill="none" stroke="#e94560" stroke-width="0.3" opacity="0.15" stroke-dasharray="4,4" transform="rotate(5,450,250)"/>
+          <!-- === ORBIT 1: VANGUARD (closest, fastest) === -->
+          <g id="o_vanguard" class="active" stroke="#ef4444" fill="#ef4444" opacity="0.95">
+                  <ellipse cx="0" cy="0" rx="88" ry="55" fill="none" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+                  <g class="rot_vanguard">
+                            <use xlink:href="#sat" transform="translate(0,-55)" color="#ef4444"/>
+                  </g>
+                  <a target="_blank" xlink:href="https://github.com/Norman-Agency/vanguard">
+                            <text x="-92" y="-46" fill="#ef4444" font-size="11px" font-weight="700" text-anchor="end" filter="url(#glow)">vanguard</text>
+                            <text x="-92" y="-34" fill="#ef4444" font-size="8px" text-anchor="end">agent IA pentester</text>
+                  </a>
+          </g>
 
-    <!-- Center logo area -->
-    <circle cx="450" cy="250" r="50" fill="#16213e" stroke="#e94560" stroke-width="2"/>
-    <text x="450" y="240" text-anchor="middle" font-family="monospace" font-size="11" fill="#e94560" font-weight="bold">NORMAN</text>
-    <text x="450" y="258" text-anchor="middle" font-family="monospace" font-size="11" fill="#fff" font-weight="bold">AGENCY</text>
-    <text x="450" y="275" text-anchor="middle" font-family="monospace" font-size="6" fill="#888">creative digital</text>
+          <!-- === ORBIT 2: AGENT-IA-SAMSUNG === -->
+          <g id="o_samsung" class="active" stroke="#f97316" fill="#f97316" opacity="0.95">
+                  <ellipse cx="0" cy="0" rx="138" ry="82" fill="none" stroke-width="1" stroke-dasharray="3,3" opacity="0.55"/>
+                  <g class="rot_samsung">
+                            <use xlink:href="#sat" transform="translate(0,82)" color="#f97316"/>
+                  </g>
+                  <a target="_blank" xlink:href="https://github.com/Norman-Agency/agent-ia-samsung">
+                            <text x="145" y="60" fill="#f97316" font-size="11px" font-weight="700" text-anchor="start" filter="url(#glow)">agent-ia-samsung</text>
+                            <text x="145" y="72" fill="#f97316" font-size="8px" text-anchor="start">Samsung → IA perso</text>
+                  </a>
+          </g>
 
-    <!-- Orbiting elements - HTML -->
-    <circle cx="550" cy="250" r="18" fill="#E34F26" opacity="0.9"/>
-    <text x="550" y="254" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" font-weight="bold">HTML5</text>
+          <!-- === ORBIT 3: SUBVENTIONAI === -->
+          <g id="o_subvention" class="active" stroke="#06b6d4" fill="#06b6d4" opacity="0.95">
+                  <ellipse cx="0" cy="0" rx="188" ry="110" fill="none" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+                  <g class="rot_subvention">
+                            <use xlink:href="#sat" transform="translate(0,-110)" color="#06b6d4"/>
+                  </g>
+                  <a target="_blank" xlink:href="https://github.com/Norman-Agency/SubventionAI">
+                            <text x="195" y="-95" fill="#06b6d4" font-size="11px" font-weight="700" text-anchor="start" filter="url(#glow)">SubventionAI</text>
+                            <text x="195" y="-83" fill="#06b6d4" font-size="8px" text-anchor="start">subventions FR + IA</text>
+                  </a>
+          </g>
 
-    <!-- CSS -->
-    <circle cx="390" cy="170" r="16" fill="#1572B6" opacity="0.9"/>
-    <text x="390" y="174" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" font-weight="bold">CSS3</text>
+          <!-- === ORBIT 4: JOURNAL-DE-TACHES === -->
+          <g id="o_journal" class="active" stroke="#a855f7" fill="#a855f7" opacity="0.95">
+                  <ellipse cx="0" cy="0" rx="238" ry="138" fill="none" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"/>
+                  <g class="rot_journal">
+                            <use xlink:href="#sat" transform="translate(0,-138)" color="#a855f7"/>
+                  </g>
+                  <a target="_blank" xlink:href="https://github.com/Norman-Agency/journal-de-taches-multi-poste">
+                            <text x="-245" y="-125" fill="#a855f7" font-size="11px" font-weight="700" filter="url(#glow)">journal-de-taches</text>
+                            <text x="-245" y="-113" fill="#a855f7" font-size="8px">TDAH/TSA + Claude AI</text>
+                  </a>
+          </g>
 
-    <!-- JavaScript -->
-    <circle cx="350" cy="290" r="17" fill="#F7DF1E" opacity="0.9"/>
-    <text x="350" y="294" text-anchor="middle" font-family="monospace" font-size="7" fill="#000" font-weight="bold">JS</text>
+          <!-- === ORBIT 5: NORMAN-AGENCY (slowest, outermost) === -->
+          <g id="o_agency" class="active" stroke="#94a3b8" fill="#94a3b8" opacity="0.9">
+                  <ellipse cx="0" cy="0" rx="390" ry="195" fill="none" stroke-width="1" stroke-dasharray="4,4" opacity="0.35"/>
+                  <g class="rot_agency">
+                            <use xlink:href="#sat" transform="translate(0,-195)" color="#94a3b8"/>
+                  </g>
+                  <a target="_blank" xlink:href="https://github.com/Norman-Agency">
+                            <text x="395" y="-130" fill="#94a3b8" font-size="12px" font-weight="700" text-anchor="start" filter="url(#glow)">Norman-Agency</text>
+                            <text x="395" y="-118" fill="#94a3b8" font-size="8px" text-anchor="start">creative digital agency</text>
+                  </a>
+          </g>
 
-    <!-- AI -->
-    <circle cx="580" cy="170" r="22" fill="#412991" opacity="0.9"/>
-    <text x="580" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#fff" font-weight="bold">AI</text>
-    <text x="580" y="179" text-anchor="middle" font-family="monospace" font-size="6" fill="#ccc">&amp; LLM</text>
+          <!-- === CENTER CORE === -->
+          <g id="core" class="nofade">
+                  <ellipse cx="0" cy="0" rx="75" ry="75" fill="url(#aura)" class="pulse"/>
+                  <circle  cx="0" cy="0" r="45" fill="url(#core_grad)" stroke="#e94560" stroke-width="2"/>
+                  <text x="0" y="-8"  text-anchor="middle" font-size="11px" fill="#e94560" font-weight="700" font-family="'Courier New',monospace" filter="url(#glow2)">NORMAN</text>
+                  <text x="0" y="6"   text-anchor="middle" font-size="11px" fill="white"   font-weight="700" font-family="'Courier New',monospace">AGENCY</text>
+                  <text x="0" y="20"  text-anchor="middle" font-size="6px"  fill="#888"    font-family="'Courier New',monospace">creative digital</text>
+          </g>
 
-    <!-- Claude -->
-    <circle cx="620" cy="320" r="20" fill="#D97757" opacity="0.9"/>
-    <text x="620" y="317" text-anchor="middle" font-family="monospace" font-size="7" fill="#fff" font-weight="bold">Claude</text>
-    <text x="620" y="329" text-anchor="middle" font-family="monospace" font-size="6" fill="#fff">AI</text>
+          <!-- === TOP TITLE === -->
+          <g class="nofade">
+                  <text x="0" y="-228" text-anchor="middle" font-size="13px" fill="#e94560" opacity="0.7" font-family="'Courier New',monospace" letter-spacing="2">explo(r|it)ing digital boundaries</text>
+          </g>
 
-    <!-- UX Design -->
-    <circle cx="300" cy="200" r="15" fill="#FF61F6" opacity="0.9"/>
-    <text x="300" y="197" text-anchor="middle" font-family="monospace" font-size="6" fill="#fff" font-weight="bold">UX</text>
-    <text x="300" y="207" text-anchor="middle" font-family="monospace" font-size="5" fill="#fff">Design</text>
+          <!-- === MUAY THAI label top-left === -->
+          <g class="nofade">
+                  <text x="-440" y="-215" fill="#fbbf24" font-size="16px" font-weight="700" font-family="'Courier New',monospace" filter="url(#glow)">&#x1F94A; muay thai</text>
+                  <text x="-440" y="-200" fill="#fbbf24" font-size="9px"  font-family="'Courier New',monospace">norman nonnon</text>
+          </g>
 
-    <!-- SubventionAI project -->
-    <circle cx="200" cy="300" r="24" fill="none" stroke="#00d2ff" stroke-width="1.5" opacity="0.8"/>
-    <text x="200" y="296" text-anchor="middle" font-family="monospace" font-size="6" fill="#00d2ff" font-weight="bold">Subvention</text>
-    <text x="200" y="308" text-anchor="middle" font-family="monospace" font-size="7" fill="#00d2ff" font-weight="bold">AI</text>
+          <!-- === IA label top-right === -->
+          <g class="nofade">
+                  <text x="440" y="-215" fill="#a855f7" font-size="16px" font-weight="700" text-anchor="end" font-family="'Courier New',monospace" filter="url(#glow)">intelligence artificielle &#x1F916;</text>
+                  <text x="440" y="-200" fill="#a855f7" font-size="9px"  text-anchor="end" font-family="'Courier New',monospace">LLM · Claude · agents</text>
+          </g>
 
-    <!-- Agent IA Samsung project -->
-    <circle cx="700" cy="220" r="22" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
-    <text x="700" y="216" text-anchor="middle" font-family="monospace" font-size="5" fill="#00ff88" font-weight="bold">Agent IA</text>
-    <text x="700" y="228" text-anchor="middle" font-family="monospace" font-size="5" fill="#00ff88">Samsung</text>
+          <!-- === BOTTOM TEXT === -->
+          <g class="nofade">
+                  <text x="0" y="240" text-anchor="middle" font-size="9px" fill="#555" font-family="'Courier New',monospace">norman-agency.com  ·  subventionai.fr  ·  Clean code, beautiful UI</text>
+          </g>
 
-    <!-- Journal de taches project -->
-    <circle cx="180" cy="180" r="20" fill="none" stroke="#ffaa00" stroke-width="1.5" opacity="0.8"/>
-    <text x="180" y="176" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00" font-weight="bold">Journal</text>
-    <text x="180" y="188" text-anchor="middle" font-family="monospace" font-size="5" fill="#ffaa00">TDAH/TSA</text>
+          <!-- === CLOCK (decorative, bottom-right) === -->
+          <g class="nofade" transform="translate(415,195)" stroke="#94a3b8" opacity="0.6">
+                  <circle cx="0" cy="0" r="20" fill="none" stroke-width="1.2"/>
+                  <circle cx="0" cy="0" r="2"  fill="#94a3b8"/>
+                  <path class="rot_min" d="M 0,0 V -16" stroke="#cbd5e1" stroke-width="1.2"/>
+                  <path class="rot_hr"  d="M 0,0 V -10" stroke="#cbd5e1" stroke-width="2"/>
+          </g>
 
-    <!-- VANGUARD project -->-->
-    <circle cx="750" cy="380" r="24" fill="none" stroke="#ff3366" stroke-width="1.5" opacity="0.8"/>
-    <text x="750" y="376" text-anchor="middle" font-family="monospace" font-size="5" fill="#ff3366" font-weight="bold">VANGUARD</text>
-    <text x="750" y="388" text-anchor="middle" font-family="monospace" font-size="5" fill="#ff3366">Pentester</text>
+          <!-- === CURSOR BLINK (top-right of title) === -->
+          <g class="nofade">
+                  <text x="310" y="-228" fill="#e94560" font-size="13px" font-family="'Courier New',monospace" class="blink">_</text>
+          </g>
 
-    <!-- Connecting lines from center to satellites -->
-    <line x1="500" y1="250" x2="532" y2="250" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <line x1="420" y1="210" x2="400" y2="180" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <line x1="410" y1="270" x2="367" y2="285" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <line x1="490" y1="220" x2="565" y2="175" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <line x1="490" y1="280" x2="605" y2="310" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-    <line x1="420" y1="220" x2="310" y2="200" stroke="#e94560" stroke-width="0.3" opacity="0.3"/>
-
-    <!-- Top text -->
-    <text x="450" y="40" text-anchor="middle" font-family="monospace" font-size="14" fill="#e94560" opacity="0.6">explo(r|it)ing digital boundaries</text>
-
-    <!-- Bottom text -->
-    <text x="450" y="480" text-anchor="middle" font-family="monospace" font-size="10" fill="#555">norman-agency.com  ·  subventionai.fr  ·  Clean code, beautiful UI</text>
-
-    <!-- Small decorative dots on orbits -->
-    <circle cx="350" cy="250" r="2" fill="#e94560" opacity="0.6"/>
-    <circle cx="450" cy="150" r="2" fill="#0f3460" opacity="0.6"/>
-    <circle cx="550" cy="340" r="2" fill="#533483" opacity="0.5"/>
-    <circle cx="250" cy="250" r="2" fill="#e94560" opacity="0.4"/>
-    <circle cx="650" cy="250" r="2" fill="#533483" opacity="0.4"/>
-    <circle cx="450" cy="370" r="2" fill="#16213e" opacity="0.5"/>
-
+    </g>
 </svg>
